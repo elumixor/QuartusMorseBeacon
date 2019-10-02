@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="dasda/simulation/dasda.vhd" type="VHDL" />
+ <topLevel name="dasda" />
+ <deviceFamily name="cycloneii" />
+</simPackage>

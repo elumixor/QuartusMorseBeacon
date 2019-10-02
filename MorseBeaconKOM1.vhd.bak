@@ -1,0 +1,11 @@
+library ieee; use ieee.std_logic_1164.all;
+entity KOM1ea is
+port
+( X0,X1,X2,X3 : in std_logic;
+STOP, Y : out std_logic );
+end entity;
+architecture behavioral of KOM1ea is
+begin
+Y <= (X0 or X3) and (not X1 or X2);
+STOP <= X3 and X1 and X0;
+end architecture;

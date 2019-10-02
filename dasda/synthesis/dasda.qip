@@ -1,0 +1,10 @@
+set_global_assignment -entity "dasda" -library "dasda" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "dasda" -library "dasda" -name IP_TOOL_VERSION "13.0sp1"
+set_global_assignment -entity "dasda" -library "dasda" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "dasda" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../dasda.sopcinfo"]
+set_instance_assignment -entity "dasda" -library "dasda" -name SLD_INFO "QSYS_NAME dasda HAS_SOPCINFO 1 GENERATION_ID 1570045879"
+set_global_assignment -library "dasda" -name MISC_FILE [file join $::quartus(qip_path) "../../dasda.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "dasda" -name MISC_FILE [file join $::quartus(qip_path) "../../dasda.qsys"]
+
+set_global_assignment -library "dasda" -name VERILOG_FILE [file join $::quartus(qip_path) "dasda.v"]

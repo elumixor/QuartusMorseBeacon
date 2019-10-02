@@ -1,0 +1,73 @@
+# Reading C:/Altera Quartus/modelsim_ase/tcl/vsim/pref.tcl 
+# do MorseBeacon_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\Altera Quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\Altera Quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/dev/huiversity/Quartus/MorseBeaconKOM1.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MorseBeaconKOM1
+# -- Compiling architecture behavioral of MorseBeaconKOM1
+# 
+vsim -voptargs=+acc work.morsebeaconkom1
+# vsim -voptargs=+acc work.morsebeaconkom1 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.morsebeaconkom1(behavioral)
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/morsebeaconkom1/X0
+# Break key hit 
+run -all
+restart
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 50ps -step 1 -repeat forever -starttime 0ps -endtime 2000ps sim:/morsebeaconkom1/X5
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 100ps -step 1 -repeat forever -starttime 0ps -endtime 2000ps sim:/morsebeaconkom1/X4
+force -freeze sim:/morsebeaconkom1/X3 1 0, 0 {100 ps} -r 200
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 200ps -step 1 -repeat forever -starttime 0ps -endtime 2000ps sim:/morsebeaconkom1/X3
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 400ps -step 1 -repeat forever -starttime 0ps -endtime 2000ps sim:/morsebeaconkom1/X2
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 800ps -step 1 -repeat forever -starttime 0ps -endtime 2000ps sim:/morsebeaconkom1/X1
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 1600ps -step 1 -repeat forever -starttime 0ps -endtime 2000ps sim:/morsebeaconkom1/X0
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 1600ps -step 1 -repeat forever -starttime 0ps -endtime 4000ps sim:/morsebeaconkom1/X1
+# /morsebeaconkom1/X1 already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+run -all
+run
+# Break key hit 
+restart
+run -all
+add wave  \
+sim:/morsebeaconkom1/STOP \
+sim:/morsebeaconkom1/Y
+run -all
+restart
+# Break key hit 
+run -all
+restart
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 10ps -step 1 -repeat forever -starttime 0ps -endtime 4000ps sim:/morsebeaconkom1/X5
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 20ps -step 1 -repeat forever -starttime 0ps -endtime 4000ps sim:/morsebeaconkom1/X4
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 40ps -step 1 -repeat forever -starttime 0ps -endtime 4000ps sim:/morsebeaconkom1/X3
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 80ps -step 1 -repeat forever -starttime 0ps -endtime 4000ps sim:/morsebeaconkom1/X2
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 160ps -step 1 -repeat forever -starttime 0ps -endtime 4000ps sim:/morsebeaconkom1/X1
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 160ps -step 1 -repeat forever -starttime 0ps -endtime 4000ps sim:/morsebeaconkom1/X0
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 320ps -step 1 -repeat forever -starttime 0ps -endtime 4000ps sim:/morsebeaconkom1/X0
+# /morsebeaconkom1/X0 already exists in the wave, cannot add twice
+# Usage: wave create -pattern <clock|constant|random|repeater|counter|none> <args>
+# See Command Reference manual for pattern specific <args>
+wave create -driver freeze -pattern counter -startvalue 0 -endvalue 1 -type Range -direction Up -period 320ps -step 1 -repeat forever -starttime 0ps -endtime 4000ps sim:/morsebeaconkom1/X0
+add wave  \
+sim:/morsebeaconkom1/STOP \
+sim:/morsebeaconkom1/Y
+run -all
+wave editwrite -file C:/dev/huiversity/Quartus/simulation/modelsim/wave.do

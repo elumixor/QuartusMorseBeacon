@@ -1,0 +1,16 @@
+# system info dasda on 2019.10.02.21:51:18
+system_info:
+name,value
+DEVICE,EP2C35F672C6
+DEVICE_FAMILY,Cyclone II
+GENERATION_ID,1570045878
+#
+#
+# Files generated for dasda on 2019.10.02.21:51:18
+files:
+filepath,kind,attributes,module,is_top
+dasda/simulation/dasda.vhd,VHDL,,dasda,true
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
